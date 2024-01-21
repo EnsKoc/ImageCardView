@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_margin="12dp"
+        android:elevation="2dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytContent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/shadow_background"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/ivCenterView"
+        app:layout_constraintTop_toTopOf="@id/iv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/ivCenterView"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv"
+        app:layout_constraintEnd_toEndOf="@id/iv"
+        app:layout_constraintStart_toStartOf="@id/iv"
+        app:layout_constraintTop_toTopOf="@id/iv" />
+
+    <View
+        android:id="@+id/ivEndView"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv"
+        app:layout_constraintEnd_toEndOf="@id/iv"
+        app:layout_constraintStart_toEndOf="@id/iv"
+        app:layout_constraintTop_toTopOf="@id/iv" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/ivEndView"
+        app:layout_constraintTop_toTopOf="@id/lytContent"
+        tools:text="Lorem Ipsum" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="start"
+        android:maxLines="3"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/ivEndView"
+        app:layout_constraintEnd_toEndOf="@id/lytContent"
+        tools:text="Lorem Ipsum is si" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDetail"
+        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAllCaps="false"
+        android:background="@drawable/round_outline"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/lytContent"
+        app:layout_constraintEnd_toEndOf="@id/lytContent"
+        tools:text="Detail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
